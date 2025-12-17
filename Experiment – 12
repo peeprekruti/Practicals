@@ -1,0 +1,19 @@
+Write a program to illustrate the concept of static function.
+
+#include <iostream>
+using namespace std;
+
+class Sample
+{
+public:
+    static void show()
+    {
+        cout << "This is a static function";
+    }
+};
+
+int main()
+{
+    Sample::show();
+    return 0;
+}
