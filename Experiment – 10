@@ -1,0 +1,27 @@
+Write a program to illustrate the concept of friend function.
+
+#include <iostream>
+using namespace std;
+
+class Sample
+{
+    int x;
+public:
+    Sample()
+    {
+        x = 10;
+    }
+    friend void show(Sample s);
+};
+
+void show(Sample s)
+{
+    cout << "Value of x = " << s.x;
+}
+
+int main()
+{
+    Sample obj;
+    show(obj);
+    return 0;
+}
