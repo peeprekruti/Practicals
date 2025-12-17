@@ -1,0 +1,32 @@
+Experiment – 7
+Aim:
+
+Write a program to illustrate the concept of copy constructor.
+
+#include <iostream>
+using namespace std;
+
+class Sample
+{
+public:
+    int x;
+
+    Sample(int a)
+    {
+        x = a;
+    }
+
+    Sample(Sample &obj)
+    {
+        x = obj.x;
+    }
+};
+
+int main()
+{
+    Sample s1(10);
+    Sample s2 = s1;
+
+    cout << "Value of x = " << s2.x;
+    return 0;
+}
